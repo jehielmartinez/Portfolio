@@ -11,6 +11,7 @@ import Footer from "../components/Footer"
 import ProjectModal from "../components/ProjectModal"
 import Education from "../components/Education"
 import "../styles/global.css"
+import WebinarsAndBlogs from "../components/WebinarsAndBlogs"
 
 export default function Home() {
   const [resume] = useState(resumeData)
@@ -26,7 +27,7 @@ export default function Home() {
     setShow(false)
   }
 
-  const { profile, skills, about, projects, experience, education } = resume
+  const { profile, skills, about, projects, experience, education, webinars } = resume
 
   return (
     <>
@@ -35,6 +36,7 @@ export default function Home() {
         <section className="profile_section">
           <Profile profile={profile} />
           <Skills skills={skills} />
+          <WebinarsAndBlogs webinars={webinars} />
           <Twitter />
           <DownloadButton />
         </section>
