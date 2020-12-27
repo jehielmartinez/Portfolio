@@ -15,6 +15,7 @@ export default function Webinar({ video }) {
         onEnded={returnToPreview}
         url={video}
         controls
+        light
         ref={videoRef}
       />
     </section>
